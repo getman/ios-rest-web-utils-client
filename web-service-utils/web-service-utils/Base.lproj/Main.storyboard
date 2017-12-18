@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eau-oI-Hac">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="web_service_utils" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394" y="-930"/>
+        </scene>
+        <!--SQL-->
+        <scene sceneID="5YU-ma-ViT">
+            <objects>
+                <viewController id="1p3-1V-FPF" customClass="SQLRequestViewController" customModule="web_service_utils" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tss-WS-bid"/>
+                        <viewControllerLayoutGuide type="bottom" id="bP4-WU-PUy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2yg-JP-2hp">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jpw-U6-Bg2">
+                                <rect key="frame" x="11" y="13" width="681" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="http://193.124.113.157:8080/" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7TN-5G-8z0">
+                                        <rect key="frame" x="0.0" y="0.0" width="626" height="139"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkO-Vy-cAT">
+                                        <rect key="frame" x="626" y="0.0" width="55" height="30"/>
+                                        <state key="normal" title="Execute"/>
+                                        <connections>
+                                            <action selector="btnExecuteSqlRequest:" destination="1p3-1V-FPF" eventType="touchUpInside" id="42z-Zl-ju9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="responce" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="U1u-Qg-NyK">
+                                <rect key="frame" x="11" y="190" width="620" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SQL" id="ajq-bb-pxt"/>
+                    <connections>
+                        <outlet property="responceTxt" destination="U1u-Qg-NyK" id="noG-BF-cPe"/>
+                        <outlet property="txtRequest" destination="7TN-5G-8z0" id="rg2-Oj-yim"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VC-gh-vnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558.59375" y="105.46875"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="M8L-GE-UWF">
+            <objects>
+                <viewController id="jMb-FD-wNZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jxh-UT-nxe"/>
+                        <viewControllerLayoutGuide type="bottom" id="oIW-V9-Ok5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXG-dr-oQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="LjK-Ll-E1o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78O-Td-aJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="-549"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LWE-df-bt0">
+            <objects>
+                <tabBarController id="Eau-oI-Hac" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="zJx-kM-mDK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jMb-FD-wNZ" kind="relationship" relationship="viewControllers" id="hhu-hh-mqw"/>
+                        <segue destination="1p3-1V-FPF" kind="relationship" relationship="viewControllers" id="PFx-Ol-kZf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B4I-7d-xUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="-222"/>
+        </scene>
+    </scenes>
+</document>
